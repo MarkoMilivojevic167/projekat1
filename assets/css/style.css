@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+ul {
+	list-style-type: none;
+
+}
+body{
+    background-color: #fff;
+}
+.wrapper{
+    margin: 0px auto;
+    width: 85%;
+}
+header {
+    width: auto;
+    display: flex;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+button:focus{
+    outline: none;
+}
+#mainContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100%;
+}
+.content{
+    margin-top: 20px;
+    width: 45%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+    min-height: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.content ul{
+    padding: 40px 100px 110px 100px;
+}
+.content li{
+    margin-top: 30px;
+    text-align: center;
+}
+.buttonContent{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #e1e1e1;
+    border-radius: 0px 0px 10px 10px;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+
+}
+.buttonContent button{
+    border: 0px;
+    padding: 13px 35px;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #fff;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+.buttonContent button:hover{
+    opacity: 0.9;
+    transition: 0.4s;
+}
+.inputGroup {
+    background-color: #fff;
+    display: block;
+    margin: 10px 0;
+    position: relative;
+    border-radius: 6px;
+}
+
+.inputGroup label {
+    padding: 14px 30px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: #3c454c;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: color 200ms ease-in;
+    transition: color 200ms ease-in;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.inputGroup label:before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: "";
+    background-color: #5562eb;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    z-index: -1;
+}
+.inputGroup label:after {
+    width: 32px;
+    height: 32px;
+    content: "";
+    border: 2px solid #d1d7dc;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+    -webkit-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+.inputGroup input:checked ~ label {
+    color: #fff;
+}
+.inputGroup input:checked ~ label:before {
+    -webkit-transform: translate(-50%, -50%) scale3d(56, 56, 1);
+    transform: translate(-50%, -50%) scale3d(56, 56, 1);
+    opacity: 1;
+}
+.inputGroup input:checked ~ label:after {
+    background-color: #54e0c7;
+    border-color: #54e0c7;
+}
+.inputGroup input {
+    width: 32px;
+    height: 32px;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.hamburger {
+    width: 45px;
+    height: 3px;
+    background-color: #424242;
+    margin: 8px auto;
+  }
+
+#hamburger{
+    cursor: pointer;
+    width: 70px;
+    /* background-color: #f2f2f2; */
+    padding: 8px 8px;
+    border-radius: 6px;
+    margin-top: 3px;
+}
+
+#notification{
+    margin: auto;
+    padding: 15px 83px;
+    position: fixed;
+    top: 15px;
+    right: 7.5%;
+    border-radius: 6px;
+    z-index: 11;
+    color: #fff;
+}
+.notificationColorRed{
+    background-color: #f13a2d;
+}
+.notificationColorGreen{
+    background-color: rgb(84, 196, 87);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    z-index: 99;
+    display: none;
+    transition: 0.5s;
+    padding: 0px 8px 1px 8px;
+    border-radius: 6px;
+    margin-top: 11px;
+    justify-content: flex-end;
+}
+  
+.sidenav a,.sidenav p {
+    padding: 0px 8px 5px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(24, 24, 24);
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+  
+  
+.sidenav a:hover {
+    color: #979797;
+}
+  
+.sidenav .closebtn p{
+
+    font-size: 21px;
+    padding: 0px;
+    margin-left: 50px;
+    margin-top: 0px !important;
+}
+#meniLinkClose{
+    cursor:pointer;
+}
+.closebtn p:hover{
+    color: #f13a2d;
+}
+#hamburger:hover .hamburger:nth-child(2){
+    width: 35px;
+    transition: 0.3s;
+
+}
+#autorContainer{
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    margin-top: 100px;
+}
+#autorContainer img{
+    border-radius: 10px 0px 0px 10px;
+    min-height: 370px;
+}
+#authorText{
+    padding: 111px;
+}
+#authorText h2{
+    margin-bottom: 40px;
+}
+#desginBy{
+    display: flex;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+#desginBy p{
+    margin-top: 8px;
+    font-size: 16px;
+}
+#desginBy img{
+    width: 40px;
+    margin-left: 8px;
+}
+button{
+    width: 170px;
+    transition: all 0.5s;
+}
+#rightButton{
+    cursor: not-allowed;
+} 
+button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+button #bButton:after{
+    content: '\00ab' !important;
+    position: absolute;
+    top: 0;
+    left: -70px;
+    transition: 0.5s;
+}
+button:hover span {
+    padding-right: 25px;
+}
+button:hover #bButton {
+    padding-left: 25px;
+    padding-right: 0px !important;
+
+}
+  
+button:hover span:after {
+    opacity: 0.9;
+    right: 0;
+}
+.switch {
+    width: 24rem;
+    position: relative;
+}
+.switch input {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+.switch input:checked {
+    z-index: 1;
+}
+.switch input:checked + label {
+    opacity: 1;
+    cursor: default;
+}
+.switch input:not(:checked) + label:hover {
+    opacity: 0.5;
+}
+.switch label {
+    color: #fff;
+    opacity: 0.33;
+    transition: opacity 0.25s ease;
+    cursor: pointer;
+}
+.switch .toggle-outside {
+    height: 2rem;
+    border-radius: 2rem;
+    padding: 0.25rem;
+    overflow: hidden;
+    transition: 0.25s ease all;
+}
+.switch .toggle-inside {
+    border-radius: 5rem;
+    background: #ffffff;
+    position: absolute;
+    transition: 0.25s ease all;
+}
+.switch--horizontal {
+    width: 5rem;
+    height: 3rem;
+    font-size: 0;
+ 
+}
+.switch--horizontal input {
+    height: 3rem;
+    width: 6rem;
+    left: 2.5rem;
+    margin: 0;
+}
+.switch--horizontal label {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    display: inline-block;
+    width: 6rem;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+}
+.switch--horizontal label:last-of-type {
+    margin-left: 6rem;
+}
+.switch--horizontal .toggle-outside {
+    background: rgb(214, 214, 214);
+    position: absolute;
+    width: 4rem;
+    left: 2.5rem;
+}
+.switch--horizontal .toggle-inside {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.switch--horizontal input:checked ~ .toggle-outside .toggle-inside {
+    left: 0.25rem;
+}
+.switch--horizontal input ~ input:checked ~ .toggle-outside .toggle-inside {
+    left: 2.25rem;
+}
+.darkModeDugmeNapolje{
+     transition:  background 0.4s ease-in !important;
+    background: #3ea6ff !important;
+}
+body.dark code[class*=language-],
+body.dark table tbody>tr:nth-child(odd)>td,
+body.dark table tbody>tr:nth-child(odd)>th {
+    background: #fff
+}
+.dark{
+    background-color: #252525!important;
+}
+.contentDark{
+    background-color: #1b1b1b !important;
+}
+.darkInputGroup{
+    background-color: #252525 !important;
+    color: #ffffff !important;
+}
+.darkButtonContent{
+    background-color: #000000 !important;
+}
+.darkSidenav{
+    color: #fff !important;
+}
+.darkHamburger{
+    background-color: #fff !important;
+}
+@media only screen and (max-width: 950px) {
+    #mainContainer{
+        display: block;
+    }
+    .content{
+        margin: auto;
+        margin-top: 40px;
+        width: 85%;
+        background-color: #f2f2f2;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #autorContainer {
+        width: 370px;
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+    }
+    #autorContainer img{
+        border-radius: 10px 10px 0px 0px;
+    }
+    #authorText {
+        padding: 18px;
+        text-align: center;
+    }
+    #desginBy{
+        width: 370px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    #autorContainer {
+        width: 100%;
+    }
+    #desginBy{
+        width: 100%;
+        font-size: 12px;
+    }
+    #desginBy img{
+        width: 30px;
+        height: 40px;
+    }
+    #autorContainer img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .content ul {
+        padding: 40px 40px 110px 40px;
+    }
+    .wrapper{
+        width: 95%;
+    }
+}

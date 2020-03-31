@@ -1,0 +1,30 @@
+[
+    {
+      "id":1,
+      "name": "iPhone 8"
+    },
+    {
+        "id":2,
+        "name": "iPhone X"
+    },
+    {
+        "id":3,
+        "name": "iPhone Xs"
+    },
+    {
+        "id":4,
+        "name": "iPhone 11"
+    },
+    {
+        "id":5,
+        "name": "iPad Pro"
+    },
+    {
+        "id":6,
+        "name": "MacBook Pro"
+    },
+    {
+        "id":7,
+        "name": "iMac Pro"
+    }
+]
