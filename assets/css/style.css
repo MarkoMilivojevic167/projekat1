@@ -27,7 +27,7 @@ body{
 header {
     width: auto;
     display: flex;
-    margin-top: 15px;
+    margin-top: 10px;
     border-radius: 6px;
 }
 button:focus{
@@ -40,7 +40,7 @@ button:focus{
     min-height: 100%;
 }
 .content{
-    margin-top: 20px;
+    margin-top: 15px;
     width: 45%;
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -50,10 +50,10 @@ button:focus{
     position: relative;
 }
 .content ul{
-    padding: 40px 100px 110px 100px;
+    padding: 40px 90px 105px 90px;
 }
 .content li{
-    margin-top: 30px;
+    margin-top: 25px;
     text-align: center;
 }
 .buttonContent{
@@ -69,7 +69,7 @@ button:focus{
 }
 .buttonContent button{
     border: 0px;
-    padding: 13px 35px;
+    padding: 11px 35px;
     border-radius: 5px;
     background-color: #2a2a2a;
     color: #fff;
@@ -89,7 +89,7 @@ button:focus{
 }
 
 .inputGroup label {
-    padding: 14px 30px;
+    padding: 13px 30px;
     width: 100%;
     display: block;
     text-align: left;
@@ -101,6 +101,7 @@ button:focus{
     transition: color 200ms ease-in;
     overflow: hidden;
     border-radius: 6px;
+    font-size: 14px !important;
 }
 .inputGroup label:before {
     width: 10px;
@@ -122,7 +123,7 @@ button:focus{
     width: 32px;
     height: 32px;
     content: "";
-    border: 2px solid #d1d7dc;
+    border: 1.5px solid #d1d7dc;
     background-color: #fff;
     background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
     background-repeat: no-repeat;
@@ -164,14 +165,6 @@ button:focus{
     cursor: pointer;
     visibility: hidden;
 }
-
-.hamburger {
-    width: 45px;
-    height: 3px;
-    background-color: #424242;
-    margin: 8px auto;
-  }
-
 #hamburger{
     cursor: pointer;
     width: 70px;
@@ -180,16 +173,16 @@ button:focus{
     border-radius: 6px;
     margin-top: 3px;
 }
-
-#notification{
+#notification {
     margin: auto;
-    padding: 15px 83px;
+    padding: 13px 65px;
     position: fixed;
     top: 15px;
     right: 7.5%;
     border-radius: 6px;
-    z-index: 11;
+    z-index: 111;
     color: #fff;
+    font-size: 15px;
 }
 .notificationColorRed{
     background-color: #f13a2d;
@@ -197,13 +190,11 @@ button:focus{
 .notificationColorGreen{
     background-color: rgb(84, 196, 87);
 }
-
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 100%;
     z-index: 99;
-    display: none;
-    transition: 0.5s;
+    display: flex;
     padding: 0px 8px 1px 8px;
     border-radius: 6px;
     margin-top: 11px;
@@ -213,36 +204,36 @@ button:focus{
 .sidenav a,.sidenav p {
     padding: 0px 8px 5px 32px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     color: rgb(24, 24, 24);
     transition: 0.3s;
     text-align: center;
     font-weight: bold;
-    margin-top: 3px;
+    margin-top: 5px;
   }
   
   
 .sidenav a:hover {
     color: #979797;
 }
-  
 .sidenav .closebtn p{
 
-    font-size: 21px;
+    font-size: 22px;
     padding: 0px;
     margin-left: 50px;
     margin-top: 0px !important;
 }
 #meniLinkClose{
     cursor:pointer;
+    margin-top: 0px !important;
 }
 .closebtn p:hover{
     color: #f13a2d;
 }
-#hamburger:hover .hamburger:nth-child(2){
+#hamburger:hover .bar2{
     width: 35px;
     transition: 0.3s;
-
+    margin-left: 5px;
 }
 #autorContainer{
     width: 100%;
@@ -253,13 +244,16 @@ button:focus{
 }
 #autorContainer img{
     border-radius: 10px 0px 0px 10px;
-    min-height: 370px;
+    min-height: 350px;
 }
 #authorText{
-    padding: 111px;
+    padding: 115px;
 }
 #authorText h2{
     margin-bottom: 40px;
+}
+#authorText p{
+    font-size: 14px;
 }
 #desginBy{
     display: flex;
@@ -274,15 +268,16 @@ button:focus{
 }
 #desginBy p{
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 15px;
 }
 #desginBy img{
     width: 40px;
     margin-left: 8px;
 }
 button{
-    width: 170px;
+    width: 160px;
     transition: all 0.5s;
+    font-size: 13px !important;
 }
 #rightButton{
     cursor: not-allowed;
@@ -361,8 +356,8 @@ button:hover span:after {
     transition: 0.25s ease all;
 }
 .switch--horizontal {
-    width: 5rem;
-    height: 3rem;
+    width: 6rem;
+    height: 1rem;
     font-size: 0;
  
 }
@@ -402,7 +397,7 @@ button:hover span:after {
 }
 .darkModeDugmeNapolje{
      transition:  background 0.4s ease-in !important;
-    background: #3ea6ff !important;
+    background: #5562eb !important;
 }
 body.dark code[class*=language-],
 body.dark table tbody>tr:nth-child(odd)>td,
@@ -410,7 +405,7 @@ body.dark table tbody>tr:nth-child(odd)>th {
     background: #fff
 }
 .dark{
-    background-color: #252525!important;
+    background-color: #252525fb!important;
 }
 .contentDark{
     background-color: #1b1b1b !important;
@@ -427,6 +422,24 @@ body.dark table tbody>tr:nth-child(odd)>th {
 }
 .darkHamburger{
     background-color: #fff !important;
+}
+.bar1, .bar2, .bar3{
+    width: 45px;
+    height: 3px;
+    background-color: #333;
+    margin: 6.5px 0;
+    transition: 0.4s;
+}
+.change .bar1{
+    -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
 }
 @media only screen and (max-width: 950px) {
     #mainContainer{
@@ -449,6 +462,7 @@ body.dark table tbody>tr:nth-child(odd)>th {
     }
     #autorContainer img{
         border-radius: 10px 10px 0px 0px;
+        min-height: 370px;
     }
     #authorText {
         padding: 18px;
@@ -456,6 +470,28 @@ body.dark table tbody>tr:nth-child(odd)>th {
     }
     #desginBy{
         width: 370px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .sidenav {
+        display: grid;
+        justify-content: center;
+    }
+    .switch--horizontal {
+        width: 7rem;
+        margin: auto;
+    }
+    header {
+
+        display: block;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .content ul {
+        padding: 40px 40px 110px 40px;
+    }
+    .wrapper{
+        width: 95%;
     }
 }
 @media only screen and (max-width: 350px) {
@@ -475,11 +511,3 @@ body.dark table tbody>tr:nth-child(odd)>th {
     }
 }
 
-@media only screen and (max-width: 500px) {
-    .content ul {
-        padding: 40px 40px 110px 40px;
-    }
-    .wrapper{
-        width: 95%;
-    }
-}

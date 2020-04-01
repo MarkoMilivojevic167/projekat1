@@ -4,9 +4,13 @@ $( document ).ready(function() {
         $("#notification").hide();
     }, 2000);
 
+    $("#mySidenav").hide();
+
     menu();
+    
     getProducts();
 
+    
 });
 
 
@@ -15,31 +19,31 @@ function getProducts(){
         url:"data/products.json",
         dataType:"JSON",
         success:function(data){
-            var leftProducts = data;
-            var leftProduct = [];
+            var products = data;
+            var rightProduct = [];
 
-            sortProducts(leftProducts)
-            printProducts(leftProducts,"leftContent"); 
+            sortProducts(products)
+            printProducts(products,"leftContent"); 
 
             $("#rightButton").click(function(){
-                checkedProduct(leftProducts,"leftContent","rightContent")
+                checkedProduct(products,"leftContent","rightContent")
             });
             
             $("#leftButton").click(function(){
-                checkedProduct(leftProduct,"rightContent","leftContent")   
+                checkedProduct(rightProduct,"rightContent","leftContent")   
             });
 
             $('#leftButton').on('click',function(){
-                insertProduct(leftProducts,"leftContent");
+                insertProduct(products,"leftContent");
             });
 
             $('#rightButton').on('click',function(){
-                insertProduct(leftProduct,"rightContent");
+                insertProduct(rightProduct,"rightContent");
             }); 
 
 
             $("#c").click(function(){    
-                sendProducts(leftProduct);
+                sendProducts(rightProduct);
             });
 
         },error:ajaxError
@@ -82,16 +86,12 @@ function ajaxError(greska, status, statusText){
 
 function menu(){
     document.querySelector("#hamburger").addEventListener("click",function(){
-        document.querySelector("header").style.transition="1s";
-        document.querySelector("#mySidenav").style.width = "100%";
-        document.getElementById("mySidenav").style.display="flex";
+        $("#mySidenav").slideToggle(400);
+        document.querySelector("#hamburger").classList.toggle("change");
     });
-    document.querySelector("#meniLinkClose").addEventListener("click",function(){
-        document.querySelector("header").style.transition="1s";
-        document.querySelector("#mySidenav").style.width = "0";
-        document.getElementById("mySidenav").style.display="none";
-    });
+    
 }
+
 
 function disableButton(data,button){
     if(data.length==0){
@@ -149,12 +149,12 @@ function checkedProduct(data,content,checkbox){
     printProducts(data,content);
 }
 
-function sendProducts(leftProduct){
+function sendProducts(data){
     $.ajax({
         url:"obrada.php",
         type:"POST",
         data:{
-            products:leftProduct
+            products:data
         },
         success:function(data){
             chcekProductsNumber(data);

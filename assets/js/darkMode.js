@@ -41,29 +41,20 @@ $('.radio').change(function(e){
 
 function promenaBoje(){
     $('body').addClass('dark');
-    $(".content").addClass("contentDark");
+    $(".contentDarkNone").addClass("contentDark");
     $(".buttonContent").addClass("darkButtonContent");
-    $(".sidenav a, .sidenav p ").addClass("darkSidenav");
-    $(".hamburger").addClass("darkHamburger");
-    $("#autorContainer").addClass("contentDark");
-    $("#autorContainer").addClass("darkSidenav");
-    $("#desginBy").addClass("contentDark");
-    $("#desginBy").addClass("darkSidenav");
+    $(".darkSidenavNone a, .darkSidenavNone p,darkSidenavNone,h2 ").addClass("darkSidenav");
+    $(".bar").addClass("darkHamburger");
     $("#desginBy img").attr("src", "assets/images/logoWhite.png");
     $(".switch--horizontal .toggle-outside").addClass("darkModeDugmeNapolje");
-
 }
 
 function vracanjeBoje(){
     $('body').removeClass('dark');
-    $(".content").removeClass("contentDark");
+    $(".contentDarkNone").removeClass("contentDark");
     $(".buttonContent").removeClass("darkButtonContent");
-    $(".sidenav a, .sidenav p ").removeClass("darkSidenav");
-    $(".hamburger").removeClass("darkHamburger");
-    $("#autorContainer").removeClass("contentDark");
-    $("#autorContainer").removeClass("darkSidenav");
-    $("#desginBy").removeClass("contentDark");
-    $("#desginBy").removeClass("darkSidenav");
+    $(".darkSidenavNone a, .darkSidenavNone p ,darkSidenavNone, h2").removeClass("darkSidenav");
+    $(".bar").removeClass("darkHamburger");
     $("#desginBy img").attr("src", "assets/images/logo.png");
     $(".switch--horizontal .toggle-outside").removeClass("darkModeDugmeNapolje");
 }
